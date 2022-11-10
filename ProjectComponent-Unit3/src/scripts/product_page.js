@@ -1,8 +1,45 @@
+//importing navbar
+// let navbar = document.getElementById("navbar")
+// import navbar from './ProjectUnit3/JS201-CW-Project/components/export.js'
+// navbar.innerHTML=navbar()
+
 let container_div_middle = document.getElementById('middle-section');
-let container_div_right = document.getElementById('right-section');
+let container_div_right = document.getElementById('product-data');
 let product_description_div = document.getElementById('product_description');
 let product_name_div = document.getElementById('product_name_heading');
+let div250g = document.getElementById('250gpack');
+let div500g = document.getElementById('500gpack');
+let div1000g = document.getElementById('1000gpack');
+let addtobasketbtn = document.getElementById('addtobasketitem');
+
+
+const buttonfunc=addtobasketbtn.onclick=async()=>
+  {
+      await addtocart()
+  }
+
+
+
+div250g.onclick=(event) =>
+{
+  event.preventDefault();
+  let price = 250;
+  div250g.style.backgroundColor = '#e6f3d3';
+  updatePrice(price);
+ 
+}
+div500g.onclick = (event) => {
+  event.preventDefault();
+  let price = 500;
+  updatePrice(price);
+};
+div1000g.onclick = (event) => {
+  event.preventDefault();
+  let price = 1000;
+  updatePrice(price);
+};
 let count = 0;
+//let packsize = 100
 const getData = async () => {
   let res = await fetch('http://localhost:3000/selectedProduct');
   let data = await res.json();
@@ -28,8 +65,8 @@ const appendMiddle=(data, container) =>
         //item.className("item")
         let image = document.createElement("img")
         image.src = ele.image;
-        image.style.width = "100%"
-        image.style.height = "auto";
+        image.setAttribute("id","productimg")
+      image.style.objectFit = 'cover';
         
         // let name = document.createElement('p');
         // name.innerText=ele.name
@@ -61,7 +98,7 @@ const appendMiddle=(data, container) =>
 
 //append Right
 const appendRignt = (data, container) => {
-  let container_div = document.getElementById('right-section');
+  let container_div = document.getElementById('product-data');
   container_div.innerHTML = null;
   console.log('Right appended');
   data.forEach((ele) => {
@@ -73,34 +110,34 @@ const appendRignt = (data, container) => {
     // image.style.height = 'auto';
 
     let name = document.createElement('p');
-    name.innerText = ele.name;
+    name.innerText = ele.name+","+" "+ele.packsize+"g";
     let price = document.createElement('p');
-    price.innerText = ele.price;
+    price.innerText = 'Price:'+" "+'₹'+" "+ ele.price;
     price.className = 'product_price';
     let delivery = document.createElement('p');
     delivery.innerText = ele.delivery;
     delivery.className = 'product_delivery';
     let description = document.createElement('p');
     description.innerText = ele.description;
-    let itembelow = document.createElement('div');
-    let addtobasketbtn = document.createElement('button');
-    addtobasketbtn.innerText = 'ADD TO BASKET';
-    addtobasketbtn.className = 'addtobasketitem';
+    // let itembelow = document.createElement('div');
+    // let addtobasketbtn = document.createElement('button');
+    // addtobasketbtn.innerText = 'ADD TO BASKET';
+    // addtobasketbtn.id = 'addtobasketitem';
     // addtobasketbtn.onclick = () => {
-    //   removeItem(ele);
+    //   addtocart(ele);
     // };
-    let savebtn = document.createElement('button');
-    savebtn.innerText = 'SAVE';
-    savebtn.className = 'update_price';
+    // let savebtn = document.createElement('button');
+    // savebtn.innerText = 'SAVE';
+    // savebtn.id = 'save';
     //   savebtn.onclick = () => {
     //     updateItem(ele);
     //   };
     itemabove.append(name, price);
-    itembelow.append(addtobasketbtn, savebtn);
-    container.append(itemabove, itembelow);
+   // itembelow.append(addtobasketbtn, savebtn);
+    container.append(itemabove);
   });
 };
-//appendname
+//appendnameasbelowheading
 
 const appendName = (data, container) => {
   let container_div = document.getElementById('product_name_heading');
@@ -116,6 +153,7 @@ const appendName = (data, container) => {
 
     let name = document.createElement('p');
     name.innerText = ele.name;
+    name.id = "cssproductname";
     // let price = document.createElement('p');
     // price.innerText = ele.price;
     // price.className = 'product_price';
@@ -181,4 +219,90 @@ const appendDescription = (data, container) => {
     item.append(description);
     container.append(item);
   });
+};
+
+//ChangePriceto250g
+const updatePrice = async (updatepack) =>
+{
+   let resp = await fetch('http://localhost:3000/selectedProduct');
+   let datap = await resp.json();
+   datap.forEach((elem) => {
+     presentId = elem.id;
+     presentprice = elem.price;
+     presentpacksize = elem.packsize;
+   });
+   // newprice=presentprice*(updatePrice/100)
+   // console.log(presentData);
+
+   // let selectedData = getSelectedData();
+
+   // console.log("Product",selectedData)
+   // console.log(ele)
+   // console.log(ele.id)
+  console.log(updatepack)
+  console.log(presentprice)
+  console.log(presentpacksize)
+   let newpack=updatepack
+  let newprice = (presentprice / presentpacksize) * newpack;
+  console.log(newprice)
+ 
+   let send_data = {
+     price: newprice,
+     packsize: newpack,
+   };
+
+   let res = await fetch(`http://localhost:3000/selectedProduct/${presentId}`, {
+     method: 'PATCH',
+     body: JSON.stringify(send_data),
+     headers: {
+       'Content-Type': 'application/json',
+     },
+   });
+   console.log('Product Page');
+   window.location.href = 'product_page.html';
+   let data = await res.json();
+   console.log(data);
+
+}
+
+//addtocart
+
+const addtocart = async () =>
+{
+  let resp = await fetch('http://localhost:3000/selectedProduct');
+  let datap = await resp.json();
+  datap.forEach((elem) => {
+    nid = elem.nid;
+    name=elem.name
+    price = elem.price;
+    packsize = elem.packsize;
+    description = elem.description;
+    delivery = elem.delivery;
+    image = elem.image;
+ 
+
+  });
+  
+  let send_data = {
+    id:nid,
+    name,
+    price,
+    packsize,
+    description,
+    delivery,
+    image,
+    
+  };
+
+  let res = await fetch('http://localhost:3000/carts', {
+    method: 'POST',
+    body: JSON.stringify(send_data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  console.log('Cart Page');
+  window.location.href = 'cartpage.html';
+  let data = await res.json();
+  console.log(data);
 };
