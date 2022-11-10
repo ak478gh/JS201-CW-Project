@@ -13,7 +13,7 @@ body
 {
     width:100%;
     height:auto;
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     display: grid;
     grid-template-rows: 1;
     grid-template-columns: 1fr 1.5fr 1.5fr;
@@ -21,10 +21,12 @@ body
 }
 #left-section
 {
-background-color: pink;
+/* background-color: pink; */
 display: grid;
 grid-template-columns: 1fr;
 grid-template-rows: auto;
+border-right: 1px solid #dedede;
+padding-left: 2rem;
 }
 .cat_head 
 {
@@ -56,18 +58,94 @@ grid-template-rows: auto;
 }
 #middle-section
 {
-    background-color: yellow;
+    /* background-color: yellow; */
+    margin: auto;
+}
+#middle-section:hover
+{
+    
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 #right-section
 {
-      background-color: cornflowerblue;
+      /* background-color: cornflowerblue; */
+      margin-left: 2rem;
+      margin-right: 1rem
 }
+#cssproductname
+{
+        font-size: 1.8rem;
+    color: #222;
+    padding-top: .6rem;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+#addtobasketitem
+{
+        cursor: pointer;
+    margin: 0 5px;
+    background: #84c225;
+    color: #fff;
+    border: 1px solid #84c225;
+    border-radius: 3px;
+    padding: 11px 30px;
+    
+}
+#addtobasketitem:hover
+{
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#save
+{
+        position: relative;
+    background: #fff;
+    margin: 0 5px;
+    padding: 11px 30px;
+    border:#d0d0d0 solid 0.1rem
+}
+#save:hover
+{
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#packsize
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    
+    gap:1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.packdiv
+{
+    
+    border: none;
+    width: 100%;
+    
+    cursor: pointer;
+    font-size: 1.2rem;
+    min-height: 54px;
+    border-radius: .3rem;
+    overflow: hidden;
+    min-height: 3rem;
+    border: 1px solid #d0d0d0;
+    
+    padding-left:1rem;
+    
+
+}
+.packdiv:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
 #product_name_heading
 {
     width:100%;
     height: 40px;
     padding:5px;
-    background-color: aqua;
+    /* background-color: aqua; */
     margin:auto;
     line-height: 10px;
     font-size: large;
@@ -98,4 +176,8 @@ grid-template-rows: auto;
     width:100%;
     height:400px;
     background-color: burlywood;
+}
+#productimg:hover
+{
+transform: scale(1.1);
 }

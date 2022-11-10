@@ -96,21 +96,27 @@ const selectedProduct = async (ele) =>
  // console.log("Product",selectedData)
   // console.log(ele)
   // console.log(ele.id)
+  let id = ele.id;
   let name = ele.name;
   let price = ele.price;
+  let packsize = ele.packsize;
   let description = ele.description;
   let delivery = ele.delivery;
   let image = ele.image;
-  let id = ++count;
+  let catagory = ele.catagory;
+  console.log(ele.id+"----------"+id)
   let send_data = {
-    id,
+    id:id,
     name,
     price,
+    packsize,
     description,
     delivery,
     image,
+    catagory,
+    nid:ele.id
     };
-
+console.log("--------------------------"+id)
   let res = await fetch(`http://localhost:3000/selectedProduct/${presentId}`, {
     method: 'PATCH',
     body: JSON.stringify(send_data),
@@ -119,7 +125,7 @@ const selectedProduct = async (ele) =>
     },
   });
     console.log("Product Page")
-    window.location.href = 'product_page.html';
+  window.location.href = 'product_page.html';
   let data = await res.json();
     console.log(data);
     
