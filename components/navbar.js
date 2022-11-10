@@ -1,16 +1,15 @@
 var navbar = document.getElementById('navbar');
 var login = document.getElementById('login');
 var logo = document.getElementById('logo');
+var sticky = navbar.offsetTop;
 window.onscroll = ()=> {
     if(window.pageYOffset >= login.offsetHeight) {
         navbar.classList.add('sticky');
         logo.classList.add('logo');
-        // logo.src = './components/smallLogo.png';
-        logo.src = './smallLogo.png';
+        logo.src = './styles/smallLogo.png';
     } else {
         navbar.classList.remove('sticky');
-        // logo.src = './components/Logo.png';
-        logo.src = './Logo.png';
+        logo.src = './styles/Logo.png';
         logo.classList.remove('logo');
     }
 }

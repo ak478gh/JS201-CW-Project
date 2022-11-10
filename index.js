@@ -1,4 +1,4 @@
-import footer from "./components/footer.js"
+
 let slideshowarr=["https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_WeekdayBangalore-1600x460-081122.png",
 "https://www.bigbasket.com/media/uploads/banner_images/2211651-bbpl-staples_460_Bangalore.jpg",
 "https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_WeekdayBangalore-1600x460-221107.png"
@@ -203,8 +203,6 @@ const stapleappend=(data)=>{
  }
  brandappend(brandarr)
 
- let footercontainer=document.getElementById("footer-container")
- footercontainer.innerHTML=footer()
 
  var owl = $('.owl-carousel');
 owl.owlCarousel({
@@ -216,3 +214,13 @@ owl.owlCarousel({
     autoplayHoverPause:true
 });
 
+//  importing Footer
+import footer from "./components/footer.js"
+ let footercontainer=document.getElementById("footer-container")
+ footercontainer.innerHTML=footer()
+
+// importing the navbar
+import navbar from './components/export.js'
+
+let navbar_div = document.getElementById('navbar_div')
+navbar_div.innerHTML = navbar();

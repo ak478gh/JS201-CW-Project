@@ -3,9 +3,11 @@ body{
     height: 1500px;
 }
 #login{
+    /* border: 1px solid; */
     font-size: 15px;
     display: flex;
-    width: 93%;
+    width: 50%;
+    float: right;
     color: #6d6b6b;
     flex-direction: row-reverse;
 }
@@ -15,8 +17,9 @@ body{
 }
 
 #navbar{
-    width: 86%;
+    width: 100%;
     margin: auto;
+    /* border: 1px solid; */
     display: grid;
     grid-template-columns: 20% 70% 10%;
     gap: auto;
@@ -26,9 +29,13 @@ body{
 
 #navbar>div{
     align-items: center;
+    /* border: 1px solid; */
 }
 img{
     width: 70%;
+}
+#logo_div {
+    margin-left: 50px;
 }
 .logo{
     width: 45%;
@@ -52,6 +59,7 @@ img{
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-right: 50px;
 }
 #right:hover {
     border: 1px solid rgb(219, 219, 219);
@@ -62,37 +70,16 @@ img{
     float: right;
     color: red;
 }
-
+/* css to apply when the navbar sticks to the top */
 .sticky{
-    position: sticky;
-    width: 100%;
+    position: fixed;
     top: 0;
+    width: 100%;
+    margin: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: white;
 }
-#navbar+div{
-    display: flex;
-    width: 86%;
-    margin: auto;
-    border: 1px solid;
-}
-#shopByCategory{
-    border-top: 1px solid grey;
-    flex: 2;
 
-}
-#flag{
-    flex-direction: 8;
-}
-
-#shopByCategory>p{
-    background-color: #84c225;
-    width: 20%;
-    padding: 8px;
-    color: white;
-    font-weight: 600;
-    margin-top: 0px;
-}
 /* User icon onclick css */
 #myAccount{
     display: flex;
@@ -103,8 +90,8 @@ img{
     width: 150px;
     border: 1px solid rgb(185, 182, 182);
     position: absolute;
-    right: 100px;
-    top: 32px;
+    right: 0;
+    top: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 

@@ -1,6 +1,5 @@
 const navbar = ()=> {
     return `
-    <div id="container"></div>
     <div id="login">
         <div id="user_icon" class="bgc_green">
             <i class="fa fa-user"></i>login▼
@@ -24,8 +23,8 @@ const navbar = ()=> {
         </ul>
     </div>
     <nav id="navbar">
-        <div>
-            <img id="logo" src="./components/Logo.png" alt="">
+        <div id="logo_div">
+            <img id="logo" src="./styles/smallLogo.png" alt="">
         </div>
         <div id="middle">
             <input type="text" id="" placeholder="Search Product">

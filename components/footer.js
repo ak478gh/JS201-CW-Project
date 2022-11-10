@@ -1,4 +1,4 @@
-const footer=()=>{
+const footer=()=> {
     return `<div id="footer">
     <div id="bigbasket">
         <h2>bigbasket</h2>
@@ -22,17 +22,21 @@ const footer=()=>{
        <p>bb Wallet T&Cs</p>
        <p>Vendor Connect</p>
  </div>
+ 
  <div id="Download Our App">
     <h2>Download Our App</h2>
     <img src="https://www.bbassets.com/static/v2608/custPage/build/content/img/Google-App-store-icon.png" alt="">
     <img src="https://www.bbassets.com/static/v2608/custPage/build/content/img/Apple-App-store-icon.png" alt="">
  </div>
- <div id="Get Social With Us">
+ <div id="Get_Social_With_Us">
     <h2>Get Social With Us</h2>
-    <img src="./facebook-icon.png" alt="">
-    <img src="./pintrest-icon.png" alt="">
-    <img src="./twitter-icon.png" alt="">
-    <img src="./instagram-icon.png" alt="">
+    <div id="social_media_logos">
+        <img src="./facebook-icon.png" alt="">
+        <img src="./pintrest-icon.png" alt="">
+        <img src="./twitter-icon.png" alt="">
+        <img src="./instagram-icon.png" alt="">
+    </div>
+    
  </div>
 </div>
 <hr style="width:90% ;margin:auto; margin-top: 10px;"/>
