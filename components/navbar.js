@@ -17,7 +17,6 @@ window.onscroll = ()=> {
 var user_icon = document.getElementById('user_icon');
 let myAccount_div = document.getElementById('myAccount')
 user_icon.onmouseenter = ()=> {
-    console.log('working');
     myAccount_div.style.display = 'block'
     user_icon.style.backgroundColor = 'green'
     user_icon.style.color = 'white'
@@ -35,4 +34,25 @@ myAccount_div.onmouseenter = ()=> {
 
 myAccount_div.onmouseleave = ()=> {
     myAccount_div.style.display = 'none'
+}
+
+// shopByCategory dropdown
+let shopByCategory_btn = document.getElementById('shopByCategory_btn')
+let shopByCategory_drpDwn = document.getElementById('shopByCategory_drpDwn')
+
+shopByCategory_btn.onmouseenter = ()=> {
+    shopByCategory_drpDwn.classList.add('shopByCategory_block')
+    shopByCategory_drpDwn.style.display = 'grid';
+}
+shopByCategory_btn.onmouseleave = ()=> {
+    shopByCategory_drpDwn.classList.remove('shopByCategory_block')
+    shopByCategory_drpDwn.style.display = 'none';
+}
+
+shopByCategory_drpDwn.onmouseenter = ()=> {
+    shopByCategory_drpDwn.classList.remove('shopByCategory_block')
+    shopByCategory_drpDwn.style.display = 'grid';
+}
+shopByCategory_drpDwn.onmouseleave = ()=> {
+    shopByCategory_drpDwn.style.display = 'none';
 }
