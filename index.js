@@ -1,4 +1,4 @@
-
+import footer from "./components/footer.js"
 let slideshowarr=["https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_WeekdayBangalore-1600x460-081122.png",
 "https://www.bigbasket.com/media/uploads/banner_images/2211651-bbpl-staples_460_Bangalore.jpg",
 "https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_WeekdayBangalore-1600x460-221107.png"
@@ -203,24 +203,45 @@ const stapleappend=(data)=>{
  }
  brandappend(brandarr)
 
+ let footercontainer=document.getElementById("footer-container")
+ footercontainer.innerHTML=footer()
 
- var owl = $('.owl-carousel');
+ 
+
+var smartbasket=$('#smartbasket .owl-carousel')
+smartbasket.owlCarousel({
+   loop:true,
+   margin:10,
+   nav:true,
+   responsive:{
+       0:{
+           items:1
+       },
+       600:{
+           items:3
+       },
+       1000:{
+           items:5
+       }
+   }
+})
+var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:1,
     loop:true,
     margin:10,
     autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:2000,
     autoplayHoverPause:true
 });
 
-//  importing Footer
-import footer from "./components/footer.js"
- let footercontainer=document.getElementById("footer-container")
- footercontainer.innerHTML=footer()
 
-// importing the navbar
-import navbar from './components/export.js'
 
-let navbar_div = document.getElementById('navbar_div')
-navbar_div.innerHTML = navbar();
+
+const product=document.querySelectorAll("#add-button")
+product.forEach((el)=>{
+el.onclick=()=>{
+   addproductfun(el)
+}
+})
+
