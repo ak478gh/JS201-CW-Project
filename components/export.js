@@ -34,6 +34,28 @@ const navbar = ()=> {
             <i class="fa fa-basket-shopping"></i>
         </div>
     </nav>
+    <div id="shopByCategory">
+        <div id="shopByCategory_btn">
+            <h3>SHOP BY CATEGORY ▼</h3>
+        </div>
+    </div>
+    <div id="shopByCategory_drpDwn">
+        <div class="UL">
+            <ul>
+                <a href="">Fruits & Vegetables</a>
+                <a href="">Foodgrains, Oils & Masala</a>
+                <a href="">Bakery, Cakes & Dairy</a>
+                <a href="">Bevarages</a>
+                <a href="">Snacks & Branded Foods</a>
+                <a href="">Foodgrains, Oils & Masala</a>
+                <a href="">Bakery, Cakes & Dairy</a>
+                <a href="">Bevarages</a>
+            </ul>
+        </div>
+        <div>this is the first div</div>
+        <div>this is the first div</div>
+        <div>this is the first div</div>
+    </div>
     `
 }
 
