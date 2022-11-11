@@ -38,7 +38,7 @@ movie()
 let final;
 
 const getData= async()=>{
-    let res= await fetch`http://localhost:3000/posts`
+    let res= await fetch`http://localhost:3000/products`
 
     let data = await res.json()
     final=data
@@ -71,7 +71,7 @@ Alphabetical.onclick=()=>{
 
 // Popularity functionality
 const popularity=async()=>{
-    let res= await fetch`http://localhost:3000/posts`
+    let res= await fetch`http://localhost:3000/products`
 
     let data = await res.json()
 
@@ -80,7 +80,7 @@ const popularity=async()=>{
 
 // Low_to_High functionality
 const sortLowToHigh= async()=>{
-    let res= await fetch`http://localhost:3000/posts?_sort=price&_order=asc`
+    let res= await fetch`http://localhost:3000/products?_sort=price&_order=asc`
 
     let data = await res.json()
     appendData(data)
@@ -89,7 +89,7 @@ const sortLowToHigh= async()=>{
 
 // high to low functionality
 const sortHighToLow=async()=>{
-    let res= await fetch`http://localhost:3000/posts?_sort=price&_order=desc`
+    let res= await fetch`http://localhost:3000/products?_sort=price&_order=desc`
 
     let data = await res.json()
     appendData(data)
@@ -99,7 +99,7 @@ const sortHighToLow=async()=>{
 // sort by Alphabetical functionality
 
 const sortAlphabetical=async ()=>{
-    let res= await fetch`http://localhost:3000/posts?_sort=name&_order=asc`
+    let res= await fetch`http://localhost:3000/products?_sort=name&_order=asc`
 
     let data = await res.json()
 
@@ -121,6 +121,9 @@ const appendData=(data)=>{
 
             let image= document.createElement("img")
             image.src= el.image
+            image.onclick = () =>{
+                selectedProduct(el)
+            }
 
             let Veg_icon= document.createElement("img")
             Veg_icon.className="Veg_icon"
@@ -145,6 +148,9 @@ const appendData=(data)=>{
             let add_btn= document.createElement("button")
             add_btn.innerText= "Add"
             add_btn.id= "add_button"
+            add_btn.onclick=()=>{
+                addtocart(el)
+            }
 
             Price.append(span2)
             standard_delevery.append(span1)
@@ -199,6 +205,9 @@ const bakeryAndSnacks=(data)=>{
 
             let image= document.createElement("img")
             image.src= el.image
+            image.onclick = () =>{
+                selectedProduct(el)
+            }
 
             let Veg_icon= document.createElement("img")
             Veg_icon.className="Veg_icon"
@@ -223,6 +232,9 @@ const bakeryAndSnacks=(data)=>{
             let add_btn= document.createElement("button")
             add_btn.innerText= "Add"
             add_btn.id= "add_button"
+            add_btn.onclick=()=>{
+                addtocart(el)
+            }
 
             Price.append(span2)
             standard_delevery.append(span1)
@@ -248,6 +260,9 @@ const breads_Buns=(data)=>{
 
             let image= document.createElement("img")
             image.src= el.image
+            image.onclick = () =>{
+                selectedProduct(el)
+            }
 
             let Veg_icon= document.createElement("img")
             Veg_icon.className="Veg_icon"
@@ -272,6 +287,9 @@ const breads_Buns=(data)=>{
             let add_btn= document.createElement("button")
             add_btn.innerText= "Add"
             add_btn.id= "add_button"
+            add_btn.onclick=()=>{
+                addtocart(el)
+            }
 
             Price.append(span2)
             standard_delevery.append(span1)
@@ -297,6 +315,9 @@ const cakes_Pastries=(data)=>{
 
             let image= document.createElement("img")
             image.src= el.image
+            image.onclick = () =>{
+                selectedProduct(el)
+            }
 
             let Veg_icon= document.createElement("img")
             Veg_icon.className="Veg_icon"
@@ -321,6 +342,9 @@ const cakes_Pastries=(data)=>{
             let add_btn= document.createElement("button")
             add_btn.innerText= "Add"
             add_btn.id= "add_button"
+            add_btn.onclick=()=>{
+                addtocart(el)
+            }
 
             Price.append(span2)
             standard_delevery.append(span1)
@@ -346,6 +370,9 @@ const cookies_Rusk_Khari=(data)=>{
 
             let image= document.createElement("img")
             image.src= el.image
+            image.onclick = () =>{
+                selectedProduct(el)
+            }
 
             let Veg_icon= document.createElement("img")
             Veg_icon.className="Veg_icon"
@@ -370,6 +397,9 @@ const cookies_Rusk_Khari=(data)=>{
             let add_btn= document.createElement("button")
             add_btn.innerText= "Add"
             add_btn.id= "add_button"
+            add_btn.onclick=()=>{
+                addtocart(el)
+            }
 
             Price.append(span2)
             standard_delevery.append(span1)
@@ -395,6 +425,9 @@ const dairy=(data)=>{
 
             let image= document.createElement("img")
             image.src= el.image
+            image.onclick = () =>{
+                selectedProduct(el)
+            }
 
             let Veg_icon= document.createElement("img")
             Veg_icon.className="Veg_icon"
@@ -419,6 +452,9 @@ const dairy=(data)=>{
             let add_btn= document.createElement("button")
             add_btn.innerText= "Add"
             add_btn.id= "add_button"
+            add_btn.onclick=()=>{
+                addtocart(el)
+            }
 
             Price.append(span2)
             standard_delevery.append(span1)
@@ -429,8 +465,102 @@ const dairy=(data)=>{
     })
 }
 
+// selectedProduct
 
+const selectedProduct = async (ele) =>
+{
+  let resp = await fetch('http://localhost:3000/selectedProduct');
+  let datap = await resp.json();
+  let presentId;
+  datap.forEach((elem) => {
+    presentId = elem.id;
+  });
+  // console.log(presentData);
+  
+ // let selectedData = getSelectedData();
 
+ // console.log("Product",selectedData)
+  // console.log(ele)
+  // console.log(ele.id)
+  let id = ele.id;
+  let name = ele.name;
+  let price = ele.price;
+  let packsize = ele.packsize;
+  let description = ele.description;
+  let delivery = ele.delivery;
+  let image = ele.image;
+  let catagory = ele.catagory;
+  console.log(ele.id+"----------"+id)
+  let send_data = {
+    id:id,
+    name,
+    price,
+    packsize,
+    description,
+    delivery,
+    image,
+    catagory,
+    nid:ele.id
+    };
+console.log("--------------------------"+id)
+  let res = await fetch(`http://localhost:3000/selectedProduct/${presentId}`, {
+    method: 'PATCH',
+    body: JSON.stringify(send_data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+    console.log("Product Page")
+  window.location.href = 'product_page.html';
+  let data = await res.json();
+    // console.log("here");
+    
+};
+
+// add to cart functionality
+
+const addtocart = async (elem) => {
+    let id, name, price, packsize, description, delivery, image,subtotal,count;
+    
+      id = elem.id;
+      name = elem.name;
+      price = elem.price;
+      packsize = elem.packsize;
+      description = elem.description;
+      delivery = elem.delivery;
+      image = elem.image;
+      subtotal= elem.price
+      count=1
+  
+    let send_data = {
+      id,
+      name,
+      price,
+      packsize,
+      description,
+      delivery,
+      image,
+      subtotal,
+      count
+    };
+  
+    let res = await fetch('http://localhost:3000/carts', {
+      method: 'POST',
+      body: JSON.stringify(send_data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    
+  };
+
+// import navbar
+import navbar from '../components/export.js'
+
+let navbar_div = document.getElementById('navbar_div')
+navbar_div.innerHTML = navbar();
+
+// import footer 
 import footer from "../components/footer.js"
  let footercontainer=document.getElementById("footer-container")
  footercontainer.innerHTML=footer()
