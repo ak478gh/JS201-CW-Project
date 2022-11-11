@@ -153,3 +153,7 @@ font-weight: bold;
 #discounted-price{
     font-size: 17px;
 }
+button{
+    color: black;
+    background-color: none;
+}
