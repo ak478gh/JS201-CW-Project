@@ -1,7 +1,12 @@
 //importing navbar
-// let navbar = document.getElementById("navbar")
-// import navbar from './ProjectUnit3/JS201-CW-Project/components/export.js'
-// navbar.innerHTML=navbar()
+import navbar from '../components/export.js'
+let navbar_div = document.getElementById("navbar")
+navbar_div.innerHTML=navbar();
+
+// footer
+import footer from "../components/footer.js"
+let footer_div = document.getElementById('footer2');
+footer_div.innerHTML = footer();
 
 let container_div_middle = document.getElementById('middle-section');
 let container_div_right = document.getElementById('product-data');
