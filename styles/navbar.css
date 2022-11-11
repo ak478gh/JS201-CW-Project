@@ -91,7 +91,7 @@ img{
     border: 1px solid rgb(185, 182, 182);
     position: absolute;
     right: 0;
-    top: 25px;
+    top: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -106,4 +106,96 @@ img{
 }
 #myAccount li:hover{
     background-color: #e4e0e0;
+}
+/* shopByCategory */
+#shopByCategory{
+    border: 1px solid;
+    width: 92%;
+    margin: auto;
+}
+
+.shopByCategory_block{
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#shopByCategory_drpDwn{
+    display: none;
+    border: 1px solid;
+    width: 92%;
+    margin: auto;
+}
+.UL{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+.UL>a:nth-child(1) {
+    background-color: white;
+}
+.col2{
+    background-color: rgb(197, 194, 194);
+    color: black;
+}
+.UL>a{
+    text-decoration: none;
+    padding: 5px;
+    font-size: 13px;
+    color: gray;
+}
+.UL>a:hover{
+    background-color: #e4e0e0;
+    color: black;
+}
+button {
+    width: auto;
+    color: white;
+    padding: 10px;
+    margin-right: 2px;
+    border: none;
+    cursor: pointer;
+}
+#shopByCategory_btn{
+    background-color: rgb(2, 189, 2);
+}
+#shopByCategory_btn~button{
+    width: auto;
+    color: black;
+    padding: 10px;
+    margin-right: 2px;
+    /* border: none; */
+    cursor: pointer;
+}
+#shopByCategory_btn~button:hover{
+    background-color: rgb(2, 189, 2);
+}
+.style{
+    background-color: white;
+    position: absolute;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid red;
+    width: 73%;
+    left: 22.5%;
+    margin: auto;
+}
+#inner_link>div{
+    display: flex;
+    flex-direction: column;
+}
+/* Login Popup */
+
+#popUp{
+    text-align: center;
+    padding: 2%;
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    /* border: 1px solid; */
+    right: 500px;
+}
+#popUp input{
+    padding: 2% 25%;
+    margin-bottom: 5px;
 }
