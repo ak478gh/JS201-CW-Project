@@ -1,4 +1,4 @@
-import footer from "./components/footer.js"
+import footer from "../components/footer.js"
 const checkoutheader=async()=>{
     let res=await fetch(`http://localhost:3000/carts`)
     let data=await res.json()
