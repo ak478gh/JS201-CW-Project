@@ -16,14 +16,14 @@
   "selectedProduct": [
     {
       "id": 4,
-      "name": "Beans - Haricot (Loose)",
-      "price": 214,
-      "packsize": 1000,
+      "name": "Onion (Loose)",
+      "price": 110,
+      "packsize": 500,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 15 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/40089741_2-fresho-beans-haricot.jpg",
+      "delivery": "Delivery: 11 Nov",
+      "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
       "catagory": "vegetable",
-      "nid": "9"
+      "nid": "3"
     }
   ],
   "carts": [

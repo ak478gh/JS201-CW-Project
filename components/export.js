@@ -32,9 +32,11 @@ const navbar = ()=> {
             <input type="text" id="" placeholder="Search Product">
             <i class="fa fa-magnifying-glass"></i>
         </div>
-        <div id="right">
-        <a href="cartpage.html"><i class="fa fa-basket-shopping"></i></a>
-        </div>
+        <a  id="right" href="cartpage.html" target="_blank">
+            <div>
+                <i class="fa fa-basket-shopping"></i>
+            </div>
+        </a>
     </nav>
 
     <!-- shopByCategory -->
