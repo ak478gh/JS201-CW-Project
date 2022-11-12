@@ -5,20 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grocery-Hub</title>
-    <script src="https://kit.fontawesome.com/0c167b58fa.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4066364e3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/authentication.css">
    
 </head>
 <body>
     <div id="navbar_div">
         
     </div>
-
+    <!-- Login/SignUp PopUp -->
+    <div id="Login_container">
+        <div id="register-form" class="common">
+          <h1>Register</h1>
+          <form id="reg_form">
+            <input type="text" id="name" placeholder="Name" />
+            <input type="text" id="email" placeholder="Email" />
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+          </form>
+  
+          <button id="Register_btn">Register</button>
+        </div>
+  
+        <div id="login-form" class="common">
+          <h1>Login</h1>
+          <form>
+            <input type="text" id="login-username" placeholder="Username" />
+  
+            <input type="password" id="login-password" placeholder="Password" />
+          </form>
+  
+          <button id="Login_btn">Login</button>
+        </div>
+      </div>
+    </div>
+    <!-- slideShow -->
     <div id=slideshow>
 
     </div>
@@ -444,3 +471,4 @@
 </html>
 <script type="module" src="./src/index.js"></script>
 <script type="module" src="./src/navbar.js"></script>
+<script src="./src/loginSignup.js"></script>

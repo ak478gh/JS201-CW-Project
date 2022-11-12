@@ -2,7 +2,7 @@ const navbar = ()=> {
     return `
     <div id="login">
         <div id="user_icon" class="bgc_green">
-            <i class="fa fa-user"></i>login▼
+            <i class="fa fa-user"></i><span id="userName">login▼</span>
         </div>
         <div>
             <i class="fa fa-phone"></i>1860 123 1000
@@ -32,7 +32,7 @@ const navbar = ()=> {
             <input type="text" id="" placeholder="Search Product">
             <i class="fa fa-magnifying-glass"></i>
         </div>
-        <a  id="right" href="cartpage.html" target="_blank">
+        <a  id="right" href="checkout.html" target="_blank">
             <div>
                 <i class="fa fa-basket-shopping"></i>
             </div>

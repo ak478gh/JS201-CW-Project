@@ -61,10 +61,15 @@ class User {
         });
 
         const data = await (await res).json();
-        // console.log('data: ', data);
+        // const {error} = await (await res).json();
+        console.log('Login error: ', data.error);
+        Login_status = data.error;
         return data;
+        
     }
 };
+// Global Variables
+let Login_status
 
 // Creating a User
 let user = new User();
@@ -112,7 +117,34 @@ const getProfile = async (username, token) => {
         }
     });
 
-    let data = await res.json();
-    console.log('data: ', data);
-
+    let Profile_data = await res.json();
+    console.log('Profile_data: ', Profile_data);
+    // console.log(Profile_data.name);
+    userNaam = Profile_data.name
 }
+let userNaam;
+// addEventListeners
+let Register_btn = document.getElementById('Register_btn')
+Register_btn.onclick = ()=> {
+    Register();
+}
+
+// On clicking Login Button
+let Login_btn = document.getElementById('Login_btn')
+Login_btn.onclick = ()=> {
+    Login();
+    setTimeout(changeUsername, 4000)
+}
+
+let Login_container = document.getElementById('Login_container');
+
+// Displaying Username
+function changeUsername() {
+    let userName = document.getElementById('userName');
+    userName.innerText = userNaam
+    console.log(userNaam)
+
+    Login_container.style.display = 'none';
+    alert('Logged In!')
+}
+
