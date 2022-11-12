@@ -4,7 +4,7 @@ import footer from "../components/footer.js"
 // importing navbar
 import navbar from "../components/export.js"
 
-let navbar_div = document.getElementById('navbar')
+let navbar_div = document.getElementById('navbar_div')
 navbar_div.innerHTML = navbar();
 
 let slideshowarr=["https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_WeekdayBangalore-1600x460-081122.png",

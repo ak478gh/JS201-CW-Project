@@ -3,7 +3,6 @@ body{
     height: 1500px;
 }
 #login{
-    /* border: 1px solid; */
     font-size: 15px;
     display: flex;
     width: 50%;
