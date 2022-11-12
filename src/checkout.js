@@ -1,4 +1,14 @@
+// import navbar
+import navbar from '../components/export.js'
+let navbar_div = document.getElementById('navbar_div')
+navbar_div.innerHTML = navbar();
+
+// importing footer
 import footer from "../components/footer.js"
+let footer_div = document.getElementById('footer_div')
+footer_div.innerHTML = footer();
+
+
 const checkoutheader=async()=>{
     let res=await fetch(`http://localhost:3000/carts`)
     let data=await res.json()
@@ -68,9 +78,6 @@ const checkoutheader=async()=>{
    discount.innerText=`* For this order: Accepted food coupon is Rs. ${discountprice}`
  }
  subtotalprice()
-
- const footer_div=document.getElementById("footer-div")
- footer_div.innerHTML=footer()
 
  const subproduct=async(el)=>{
    let getid=el.id

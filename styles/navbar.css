@@ -1,6 +1,5 @@
 body{
     font-family: sans-serif;
-    height: 1500px;
 }
 #login{
     font-size: 15px;
@@ -18,7 +17,6 @@ body{
 #navbar{
     width: 100%;
     margin: auto;
-    /* border: 1px solid; */
     overflow: hidden;
     z-index: 100;
     display: grid;
@@ -30,7 +28,6 @@ body{
 
 #navbar>div{
     align-items: center;
-    /* border: 1px solid; */
 }
 img{
     width: 70%;
@@ -92,7 +89,7 @@ img{
     border: 1px solid rgb(185, 182, 182);
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -110,7 +107,8 @@ img{
 }
 /* shopByCategory */
 #shopByCategory{
-    border: 1px solid;
+    border-top: 1px solid #bbbaba;
+    border-bottom: 1px solid #bbbaba;
     width: 92%;
     margin: auto;
 }

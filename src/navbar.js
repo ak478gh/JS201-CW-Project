@@ -98,6 +98,9 @@ col3.onmouseleave = ()=>{
 
 // Login Popup
 let logInBtn = document.getElementById('logInBtn')
+let Login_container = document.getElementById('Login_container')
 logInBtn.onclick = ()=> {
     console.log('logged in!');
+    Login_container.style.display = 'flex'
 }
+
