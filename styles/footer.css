@@ -74,7 +74,20 @@
     margin-left: 90px;
 
 }
-#social_media_logos {
-    justify-content: center;
-    display: flex;
+#Get-Social-With-Us div{
+display: flex;
+}
+@media only screen and (min-width: 600px) and (max-width: 830px){
+    #footer-down-imge img{
+        width: 30px;
+        height: 30px;
+       
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    #footer-down-imge img{
+        width: 40px;
+        height: 40px;
+       
+    }
 }
