@@ -198,13 +198,17 @@ padding-left: 2rem;
     /* background-color: rgb(231, 16, 134); */
     padding-bottom: 3rem;
 }
-
+#productimg
+{
+    width: 300px;
+     height: 300px;
+     
+}
 #productimg:hover
 {
 
-width: 70%;
-margin: auto;
-transform: scale(1.5);
+
+transform: scale(1.2);
 }
 
 
