@@ -550,6 +550,96 @@ const addtocart = async (elem) => {
     
   };
 
+  //   less than rs 20
+let less_than20= document.getElementById("less_than20")
+less_than20.onclick=()=>{
+    less20(final)
+}
+
+const less20=(res)=>{
+    let sorted=[]
+    for(let i=0;i<res.length;i++){
+        if(20>=res[i].price){
+            sorted.push(res[i])
+        }
+    }
+
+    appendData(sorted)
+    console.log(sorted)
+}
+
+//   less than rs 50
+let less_than50= document.getElementById("less_than50")
+less_than50.onclick=()=>{
+    less50(final)
+}
+
+const less50=(res)=>{
+    let sorted=[]
+    for(let i=0;i<res.length;i++){
+        if(20<res[i].price && 50>=res[i].price){
+            sorted.push(res[i])
+        }
+    }
+
+    appendData(sorted)
+    console.log(sorted)
+}
+
+//   less than rs 100
+let less_than100= document.getElementById("less_than100")
+less_than100.onclick=()=>{
+    less100(final)
+}
+
+const less100=(res)=>{
+    let sorted=[]
+    for(let i=0;i<res.length;i++){
+        if(50<res[i].price && 100>=res[i].price){
+            sorted.push(res[i])
+        }
+    }
+
+    appendData(sorted)
+    console.log(sorted)
+}
+
+//   less than rs 200
+let less_than200= document.getElementById("less_than200")
+less_than200.onclick=()=>{
+    less200(final)
+}
+
+const less200=(res)=>{
+    let sorted=[]
+    for(let i=0;i<res.length;i++){
+        if(100<res[i].price && 200>=res[i].price){
+            sorted.push(res[i])
+        }
+    }
+
+    appendData(sorted)
+    console.log(sorted)
+}
+
+//   less than rs 501
+let less_than501= document.getElementById("less_than501")
+less_than501.onclick=()=>{
+    less501(final)
+}
+
+const less501=(res)=>{
+    let sorted=[]
+    for(let i=0;i<res.length;i++){
+        if(200<res[i].price){
+            sorted.push(res[i])
+        }
+    }
+
+    appendData(sorted)
+    console.log(sorted)
+}
+
 
 // importing the navbar
 import navbar from '../components/export.js'
