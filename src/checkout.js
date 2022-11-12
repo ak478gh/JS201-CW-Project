@@ -1,4 +1,4 @@
-import footer from "./components/footer.js"
+import footer from "../components/footer.js"
 const checkoutheader=async()=>{
     let res=await fetch(`http://localhost:3000/carts`)
     let data=await res.json()
@@ -75,8 +75,7 @@ const checkoutheader=async()=>{
  }
  subtotalprice()
 
- const footer_div=document.getElementById("footer-div")
- footer_div.innerHTML=footer()
+ 
 
  const subproduct=async(el)=>{
    let getid=el.id
@@ -170,3 +169,6 @@ const checkoutheader=async()=>{
     let data=await res.json()
     console.log(data)
  }
+
+ const footer_div=document.getElementById("footer_div")
+ footer_div.innerHTML=footer()

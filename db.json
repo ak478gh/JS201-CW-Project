@@ -17,7 +17,7 @@
     {
       "id": 4,
       "name": "Onion (Loose)",
-      "price": 110,
+      "price": 220,
       "packsize": 500,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
       "delivery": "Delivery: 11 Nov",
@@ -28,88 +28,25 @@
   ],
   "carts": [
     {
-      "id": 2,
-      "name": "Fresho Capsicum - Green (Loose)",
-      "price": 41,
-      "packsize": 100,
+      "id": "7",
+      "name": "Baby Apple Shimla",
+      "price": 122.5,
+      "packsize": 500,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "2022-11-06",
-      "image": "https://www.bigbasket.com/media/uploads/p/l/10000069_20-fresho-capsicum-green.jpg"
+      "delivery": "Delivery: 15 Nov",
+      "image": "https://www.bigbasket.com/media/uploads/p/s/40134281_13-fresho-baby-apple-shimla.jpg",
+      "subtotal": 122.5,
+      "count": 1
     },
     {
-      "id": 4,
-      "name": "Potato",
-      "price": 94,
-      "packsize": 100,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 11 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/l/40162469_6-fresho-potato-new-crop.jpg"
-    },
-    {
-      "id": 3,
+      "id": "3",
       "name": "Onion (Loose)",
       "price": 220,
-      "packsize": 100,
+      "packsize": 500,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
       "delivery": "Delivery: 11 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/l/10000148_30-fresho-onion.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Tomato - Local (Loose)",
-      "price": 19.5,
-      "packsize": 100,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 15 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/10000203_16-fresho-tomato-local.jpg"
-    },
-    {
-      "id": "12",
-      "name": "Banana - Yelakki",
-      "price": 66.5,
-      "packsize": 100,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 15 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Carrot - Orange (Loose)",
-      "price": 18.75,
-      "packsize": 100,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 11 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/l/10000071_14-fresho-carrot-orange.jpg"
-    },
-    {
-      "id": "14",
-      "name": "Cauliflower",
-      "price": 19.5,
-      "delivery": "Delivery: 15 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
-      "subtotal": 19.5,
-      "count": 1
-    },
-    {
-      "id": "6",
-      "name": "Tomato- Hybrid(Loose)",
-      "price": 48.75,
-      "packsize": 250,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 11 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/10000200_17-fresho-tomato-hybrid.jpg",
-      "subtotal": 48.75,
-      "count": 1
-    },
-    {
-      "id": "9",
-      "name": "Beans - Haricot (Loose)",
-      "price": 214,
-      "packsize": 1000,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      "delivery": "Delivery: 15 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/40089741_2-fresho-beans-haricot.jpg",
-      "subtotal": 214,
+      "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "subtotal": 220,
       "count": 1
     }
   ],
