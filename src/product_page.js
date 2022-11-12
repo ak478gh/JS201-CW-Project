@@ -1,6 +1,6 @@
 //importing navbar
 import navbar from '../components/export.js';
-let navbar_div = document.getElementById('navbar');
+let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = navbar();
 
 // footer

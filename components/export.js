@@ -26,14 +26,14 @@ const navbar = ()=> {
     </div>
     <nav id="navbar">
         <div id="logo_div">
-            <img id="logo" src="./styles/Logo.png" alt="">
+        <a href="index.html"><img id="logo" src="./styles/Logo.png" alt=""></a>
         </div>
         <div id="middle">
             <input type="text" id="" placeholder="Search Product">
             <i class="fa fa-magnifying-glass"></i>
         </div>
         <div id="right">
-            <i class="fa fa-basket-shopping"></i>
+        <a href="cartpage.html"><i class="fa fa-basket-shopping"></i></a>
         </div>
     </nav>
 
@@ -43,9 +43,9 @@ const navbar = ()=> {
     </div>
     <div id="shopByCategory_drpDwn">
         <div class="UL">
-            <a href="">Fruits & Vegetables</a>
+            <a href="Fruits&Vegetable.html" target="_blank">Fruits & Vegetables</a>
             <a id="second" href="">Foodgrains, Oils & Masala</a>
-            <a id="third" href="">Bakery, Cakes & Dairy</a>
+            <a id="third" href="Bakery&Cakes.html" target="_blank">Bakery, Cakes & Dairy</a>
             <a href="">Bevarages</a>
             <a href="">Snacks & Branded Foods</a>
             <a href="">Foodgrains, Oils & Masala</a>

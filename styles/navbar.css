@@ -19,6 +19,8 @@ body{
     width: 100%;
     margin: auto;
     /* border: 1px solid; */
+    overflow: hidden;
+    z-index: 100;
     display: grid;
     grid-template-columns: 20% 70% 10%;
     gap: auto;
