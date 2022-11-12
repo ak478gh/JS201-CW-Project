@@ -44,7 +44,7 @@ const getData = async () => {
   let data = await res.json();
 
   console.log(data);
-  getCartData();
+ // getCartData();
   appendMiddle(data, container_div_middle);
   appendRignt(data, container_div_right);
 
@@ -52,17 +52,17 @@ const getData = async () => {
 };
 getData();
 
-const getCartData = async () => {
-  let res = await fetch('http://localhost:3000/carts');
-  let data = await res.json();
-  let basketcount = document.getElementById('basketcount');
-  if (data.length < 0 || data.length == undefined || data.length == null) {
-    basketcount.innerText = 0;
-  } else {
-    basketcount.innerText = data.length;
-    console.log('CartData:', data);
-  }
-};
+// const getCartData = async () => {
+//   let res = await fetch('http://localhost:3000/carts');
+//   let data = await res.json();
+//   let basketcount = document.getElementById('basketcount');
+//   if (data.length < 0 || data.length == undefined || data.length == null) {
+//     basketcount.innerText = 0;
+//   } else {
+//     basketcount.innerText = data.length;
+//     console.log('CartData:', data);
+//   }
+// };
 
 const appendMiddle = (data, container) => {
   let container_div = document.getElementById('middle-section');
@@ -76,29 +76,7 @@ const appendMiddle = (data, container) => {
     image.setAttribute('id', 'productimg');
     image.style.objectFit = 'cover';
 
-    // let name = document.createElement('p');
-    // name.innerText=ele.name
-    // let price = document.createElement('p');
-    // price.innerText = ele.price;
-    // price.className = 'product_price';
-    // let delivery = document.createElement('p');
-    // delivery.innerText = ele.delivery;
-    // delivery.className = 'product_delivery';
-    // let description = document.createElement('p');
-    // description.innerText = ele.description;
-    // let removebtn=document.createElement("button")
-    // removebtn.innerText = 'Remove';
-    // removebtn.className = "remove_item"
-    // removebtn.onclick = () =>
-    // {
-    //     removeItem(ele);
-    //     }
-    //  let updatebtn = document.createElement('button');
-    // updatebtn.innerText = 'Update';
-    // updatebtn.className = 'update_price';
-    //   updatebtn.onclick = () => {
-    //     updateItem(ele);
-    //   };
+    
     item.append(image);
     container.append(item);
   });
@@ -111,11 +89,7 @@ const appendRignt = (data, container) => {
   console.log('Right appended');
   data.forEach((ele) => {
     let itemabove = document.createElement('div');
-    //item.className("item")
-    // let image = document.createElement('img');
-    // image.src = ele.image;
-    // image.style.width = '100%';
-    // image.style.height = 'auto';
+   
 
     let name = document.createElement('p');
     name.innerText = ele.name + ',' + ' ' + ele.packsize + 'g';
@@ -127,19 +101,7 @@ const appendRignt = (data, container) => {
     delivery.className = 'product_delivery';
     let description = document.createElement('p');
     description.innerText = ele.description;
-    // let itembelow = document.createElement('div');
-    // let addtobasketbtn = document.createElement('button');
-    // addtobasketbtn.innerText = 'ADD TO BASKET';
-    // addtobasketbtn.id = 'addtobasketitem';
-    // addtobasketbtn.onclick = () => {
-    //   addtocart(ele);
-    // };
-    // let savebtn = document.createElement('button');
-    // savebtn.innerText = 'SAVE';
-    // savebtn.id = 'save';
-    //   savebtn.onclick = () => {
-    //     updateItem(ele);
-    //   };
+    
     itemabove.append(name, price);
     // itembelow.append(addtobasketbtn, savebtn);
     container.append(itemabove);
@@ -153,81 +115,18 @@ const appendName = (data, container) => {
   console.log('Name appended');
   data.forEach((ele) => {
     let item = document.createElement('div');
-    //item.className("item")
-    // let image = document.createElement('img');
-    // image.src = ele.image;
-    // image.style.width = '100%';
-    // image.style.height = 'auto';
+   
 
     let name = document.createElement('p');
     name.innerText = ele.name;
     name.id = 'cssproductname';
-    // let price = document.createElement('p');
-    // price.innerText = ele.price;
-    // price.className = 'product_price';
-    // let delivery = document.createElement('p');
-    // delivery.innerText = ele.delivery;
-    // delivery.className = 'product_delivery';
-    // let description = document.createElement('p');
-    // description.innerText = ele.description;
-    // let removebtn=document.createElement("button")
-    // removebtn.innerText = 'Remove';
-    // removebtn.className = "remove_item"
-    // removebtn.onclick = () =>
-    // {
-    //     removeItem(ele);
-    //     }
-    //  let updatebtn = document.createElement('button');
-    // updatebtn.innerText = 'Update';
-    // updatebtn.className = 'update_price';
-    //   updatebtn.onclick = () => {
-    //     updateItem(ele);
-    //   };
+   
     item.append(name);
     container.append(item);
   });
 };
 
-//appendDescription
-// const appendDescription = (data, container) => {
-//   let container_div = document.getElementById('product_description');
-//   container_div.innerHTML = null;
-//   console.log('Description appended');
-//   data.forEach((ele) => {
-//     let item = document.createElement('div');
-//     //item.className("item")
-//     // let image = document.createElement('img');
-//     // image.src = ele.image;
-//     // image.style.width = '100%';
-//     // image.style.height = 'auto';
 
-//     // let name = document.createElement('p');
-//     // name.innerText=ele.name
-//     // let price = document.createElement('p');
-//     // price.innerText = ele.price;
-//     // price.className = 'product_price';
-//     // let delivery = document.createElement('p');
-//     // delivery.innerText = ele.delivery;
-//     // delivery.className = 'product_delivery';
-//     let description = document.createElement('p');
-//     description.innerText = ele.description;
-//     // let removebtn=document.createElement("button")
-//     // removebtn.innerText = 'Remove';
-//     // removebtn.className = "remove_item"
-//     // removebtn.onclick = () =>
-//     // {
-//     //     removeItem(ele);
-//     //     }
-//     //  let updatebtn = document.createElement('button');
-//     // updatebtn.innerText = 'Update';
-//     // updatebtn.className = 'update_price';
-//     //   updatebtn.onclick = () => {
-//     //     updateItem(ele);
-//     //   };
-//     item.append(description);
-//     container.append(item);
-//   });
-// };
 
 //ChangePriceto250g
 const updatePrice = async (updatepack) => {
@@ -243,7 +142,7 @@ const updatePrice = async (updatepack) => {
     presentpacksize = elem.packsize;
   });
   //  let newprice=presentprice*(updatepack/100)
-  //  console.log(presentId);
+    //console.log(presentId);
   // console.log(newprice)
   // let selectedData = getSelectedData();
 
@@ -270,7 +169,7 @@ const updatePrice = async (updatepack) => {
     },
   });
   console.log('Product Page');
-  window.location.href = 'product_page.html';
+ 
   let data = await res.json();
   console.log(data);
 };
@@ -314,8 +213,10 @@ const addtocart = async () => {
     },
   });
   console.log('Cart Page');
- // window.location.href = 'checkout.html';
+  window.location.href = 'checkout.html';
   let data = await res.json();
   console.log(data);
-  getCartData();
+ // getCartData();
 };
+
+
