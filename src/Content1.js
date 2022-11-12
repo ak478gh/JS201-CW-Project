@@ -513,6 +513,8 @@ console.log("--------------------------"+id)
   
 };
 
+console.log(final)
+
 // add to cart functionality
 
 const addtocart = async (elem) => {
