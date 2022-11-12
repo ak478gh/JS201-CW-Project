@@ -16,14 +16,14 @@
   "selectedProduct": [
     {
       "id": 4,
-      "name": "Fresho Capsicum - Green (Loose)",
-      "price": 102.5,
+      "name": "Onion (Loose)",
+      "price": 220,
       "packsize": 250,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
       "delivery": "Delivery: 11 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/l/10000069_20-fresho-capsicum-green.jpg",
+      "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
       "catagory": "vegetable",
-      "nid": "2"
+      "nid": "3"
     }
   ],
   "carts": [
@@ -42,8 +42,8 @@
       "price": 110.5,
       "delivery": "Delivery: 15 Nov",
       "image": "https://www.bigbasket.com/media/uploads/p/s/1203441_1-fresho-onion-1-kg-new-potato-1-kg-tomato-hybrid-1-kg.jpg",
-      "subtotal": 110.5,
-      "count": 1
+      "subtotal": 221,
+      "count": 2
     },
     {
       "id": "12",
@@ -62,6 +62,15 @@
       "image": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
       "subtotal": 39,
       "count": 2
+    },
+    {
+      "id": "3",
+      "name": "Onion (Loose)",
+      "price": 220,
+      "delivery": "Delivery: 11 Nov",
+      "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "subtotal": 220,
+      "count": 1
     }
   ],
   "products": [

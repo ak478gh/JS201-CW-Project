@@ -5,6 +5,26 @@
 body{
     font-family: ProximaNovaA-Regular;
 }
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+    height: 100px;
+}
+#navbar img{
+    width:200px;
+    height: 100px;
+}
+#navbar input{
+    height: 30px;
+    width: 300px;
+}
+#search{
+    display: flex;
+    align-items: center;
+}
 #slideshow{
     height: 350px;
     width: 100%;
@@ -17,14 +37,17 @@ body{
     width: 87%;
     margin: auto;
     margin-top: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(auto,auto);
+    gap: 20px;
     gap: 30px;
     cursor: pointer;
 
 }
 #multiple-div  div{
-    width: 19%;
-    height: 60px;
+ 
+    
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-align: center;
     display: flex;
@@ -53,11 +76,14 @@ body{
     text-align: center;
 }
 #bank-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto,300px);
+    gap: 30px;
     margin-top: 20px;
 }
 #bank-container div{
-    width: 22%;
+    /* width: 22%; */
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -74,11 +100,14 @@ body{
     text-align: center;
 }
 #topoffer-container{
-    display: flex;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto,300px);
+    gap: 30px;
+    margin-top: 20px
 }
 #topoffer-container div{
-    width: 22%;
+  
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -108,11 +137,13 @@ body{
     text-align: center;
 }
 #fruits-container{
-    display: flex;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(auto,300px);
+    margin-top: 20px
 }
 #fruits-container div{
-    width: 18%;
+    /* width: 18%; */
     margin: auto;
 }
 #fruits-container img{
@@ -134,11 +165,13 @@ body{
     text-align: center;
 }
 #staple-container{
-    display: flex;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(auto,300px);
+    margin-top: 20px
 }
 #staple-container div{
-    width: 18%;
+    
     margin: auto;
 }
 #staple-container img{
@@ -221,12 +254,14 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
 }
 #cleaning-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto,300px);
     gap: 20px;
     margin-top: 20px;
 }
 #cleaning-container div{
-    width: 23%;
+    /* width: 23%; */
     margin: auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -282,11 +317,14 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
 }
 #home-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(auto,200px);
+    gap: 20px;
     margin-top: 20px;
 }
 #home-container div{
-    width: 18%;
+   
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #home-container div:hover{
@@ -308,12 +346,14 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
 }
 #brand-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(auto,200px);
+    gap: 20px;
     margin-top: 20px;
-    justify-content: space-evenly;
 }
 #brand-container div{
-    width: 16%;
+   
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #brand-container div:hover{
@@ -420,6 +460,293 @@ li{
     width:140px; 
     height:140px
 }
+@media only screen and (min-width: 830px) and (max-width: 1100px) {
+    /* *{
+        padding: 0px;
+        margin: 0px;
+    } */
+    #multiple-div{
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(auto,200px);
+     gap: 20px;
+    
+    }
+    #multiple-div  div{
+        margin-top: 10px;
+    }
+    #bank-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 30px;
+        margin-top: 20px;
+    }
+    #topoffer-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 30px;
+        margin-top: 20px
+    }
+    #fruits-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        margin-top: 20px
+    }
+    #staple-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        margin-top: 20px
+    }
+    #snacks-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #cleaning-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #brand-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #home-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beverage-container{
+        display: block;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beauty-container{
+        display: block;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beverage-container-right{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,200px);
+        gap: 30px;
+        margin-top: 10px;
+    }
+    #beverage-container-right img{
+        width: 330px;
+        height: 330px;
+    }
+    #beauty-container-right img{
+        width: 330px;
+        height: 330px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 830px) {
+    /* *{
+        padding: 0px;
+        margin: 0px;
+    } */
+    #multiple-div{
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(auto,200px);
+     gap: 20px;
+    
+    }
+    #multiple-div  div{
+        margin-top: 10px;
+    }
+    #bank-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 30px;
+        margin-top: 20px;
+    }
+    #topoffer-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 30px;
+        margin-top: 20px
+    }
+    #fruits-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        margin-top: 20px
+    }
+    #staple-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        margin-top: 20px
+    }
+    #snacks-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #cleaning-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #brand-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #home-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beverage-container{
+        display: block;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beauty-container{
+        display: block;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beverage-container-right{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,200px);
+        gap: 30px;
+        margin-top: 10px;
+    }
+    #beverage-container-right img{
+        width: 330px;
+        height: 330px;
+    }
+    #beauty-container-right img{
+        width: 330px;
+        height: 330px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    /* *{
+        padding: 0px;
+        margin: 0px;
+    } */
+    #multiple-div{
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     grid-template-rows: repeat(auto,200px);
+     gap: 20px;
+    }
+    #bank-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 30px;
+        margin-top: 20px;
+    }
+    #topoffer-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 30px;
+        margin-top: 20px
+    }
+    #fruits-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,300px);
+        margin-top: 20px
+    }
+    #staple-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,300px);
+        margin-top: 20px
+    }
+    #snacks-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #cleaning-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,300px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #brand-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #home-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(auto,200px);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beverage-container{
+        display: block;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beauty-container{
+        display: block;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #beverage-container-right img{
+        width: 200px;
+        height: 200px;
+        /* display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,200px);
+        gap: 10px; */
+    }
+    #beauty-container-right img{
+        width: 200px;
+        height: 200px;
+    }
 
-
-
+}

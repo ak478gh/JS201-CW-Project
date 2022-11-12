@@ -1,4 +1,4 @@
-import footer from "../components/footer.js"
+import footer from "./components/footer.js"
 const checkoutheader=async()=>{
     let res=await fetch(`http://localhost:3000/carts`)
     let data=await res.json()
@@ -45,9 +45,15 @@ const checkoutheader=async()=>{
         buttondiv.append(subbutton,midbutton,addbutton)
         let subtotal=document.createElement('p')
         subtotal.innerText=Math.ceil(el.subtotal)
+        let remove=document.createElement("p")
+        remove.innerHTML=`<i class="fa-solid fa-trash-can"></i>`
+        remove.setAttribute("id","delete")
+        remove.onclick=()=>{
+          deletefunc(el)
+        }
         leftdiv.append(name)
         rightdiv.append(price,buttondiv,subtotal)
-        div.append(leftdiv,rightdiv)
+        div.append(leftdiv,rightdiv,remove)
         document.getElementById("description-container").append(div)
    })
  }
@@ -150,6 +156,17 @@ const checkoutheader=async()=>{
  }
  const checkout=()=>{
   alert("Your order has been placed successfully ")
+  window.location.href="index.html"
  }
   
- 
+ const deletefunc=async(el)=>{
+   let id=el.id
+   let res=await fetch(`http://localhost:3000/carts/${id}`,{
+        method:'DELETE',
+        headers:{
+            'Content-Type':'application/json'
+        }
+    })
+    let data=await res.json()
+    console.log(data)
+ }
