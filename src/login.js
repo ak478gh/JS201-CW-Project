@@ -24,6 +24,8 @@ Register_btn.onclick = ()=> {
 
 let userName = document.getElementById('myAccount')
 console.log(userName)
+
+
 Login_btn.onclick = ()=> {
 
     const username = document.getElementById('login_username').value;
@@ -35,13 +37,14 @@ Login_btn.onclick = ()=> {
 
     if(username == credentials.username && password == credentials.password) {
         alert('Login Successful!');
+        window.location.reload();
         Login_container.style.display = 'none';
-        // userName.innerText = 'Sign Out';
+        // let userNaam = JSON.parse(localStorage.getItem('login_detail'))
+        console.log(userNaam);
     } else {
         let warning = document.createElement('h4');
         warning.innerText = 'Credentials Does not match';
         register_form.append(warning);
     }
-    console.log(userName)
-
+    console.log(userName);
 }

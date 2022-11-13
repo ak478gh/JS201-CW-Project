@@ -38,7 +38,7 @@ movie()
 let final;
 
 const getData= async()=>{
-    let res= await fetch`http://localhost:3000/products`
+    let res= await fetch`https://bigbasket-kb7a.onrender.com/products`
 
     let data = await res.json()
     final=data
@@ -71,7 +71,7 @@ Alphabetical.onclick=()=>{
 
 // Popularity functionality
 const popularity=async()=>{
-    let res= await fetch`http://localhost:3000/products`
+    let res= await fetch`https://bigbasket-kb7a.onrender.com/products`
 
     let data = await res.json()
 
@@ -80,7 +80,7 @@ const popularity=async()=>{
 
 // Low_to_High functionality
 const sortLowToHigh= async()=>{
-    let res= await fetch`http://localhost:3000/products?_sort=price&_order=asc`
+    let res= await fetch`https://bigbasket-kb7a.onrender.com/products?_sort=price&_order=asc`
 
     let data = await res.json()
     appendData(data)
@@ -89,7 +89,7 @@ const sortLowToHigh= async()=>{
 
 // high to low functionality
 const sortHighToLow=async()=>{
-    let res= await fetch`http://localhost:3000/products?_sort=price&_order=desc`
+    let res= await fetch`https://bigbasket-kb7a.onrender.com/products?_sort=price&_order=desc`
 
     let data = await res.json()
     appendData(data)
@@ -99,7 +99,7 @@ const sortHighToLow=async()=>{
 // sort by Alphabetical functionality
 
 const sortAlphabetical=async ()=>{
-    let res= await fetch`http://localhost:3000/products?_sort=name&_order=asc`
+    let res= await fetch`https://bigbasket-kb7a.onrender.com/products?_sort=name&_order=asc`
 
     let data = await res.json()
 
@@ -469,7 +469,7 @@ const dairy=(data)=>{
 
 const selectedProduct = async (ele) =>
 {
-  let resp = await fetch('http://localhost:3000/selectedProduct');
+  let resp = await fetch('https://bigbasket-kb7a.onrender.com/selectedProduct');
   let datap = await resp.json();
   let presentId;
   datap.forEach((elem) => {
@@ -503,7 +503,7 @@ const selectedProduct = async (ele) =>
     nid:ele.id
     };
 console.log("--------------------------"+id)
-  let res = await fetch(`http://localhost:3000/selectedProduct/${presentId}`, {
+  let res = await fetch(`https://bigbasket-kb7a.onrender.com/selectedProduct/${presentId}`, {
     method: 'PATCH',
     body: JSON.stringify(send_data),
     headers: {
@@ -544,7 +544,7 @@ const addtocart = async (elem) => {
       count
     };
   
-    let res = await fetch('http://localhost:3000/carts', {
+    let res = await fetch('https://bigbasket-kb7a.onrender.com/carts', {
       method: 'POST',
       body: JSON.stringify(send_data),
       headers: {

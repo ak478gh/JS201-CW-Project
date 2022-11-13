@@ -104,3 +104,28 @@ logInBtn.onclick = ()=> {
     Login_container.style.display = 'flex'
 }
 
+
+let cartLength = document.getElementById('cartLength')
+const cartLength2 = async ()=> {
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts`)
+    let data=await res.json()
+    // console.log(data.length)
+    cartLength.innerText = data.length;
+}
+
+cartLength2();
+
+
+
+let userNaam = JSON.parse(localStorage.getItem('login_detail'))
+console.log(userNaam)
+
+let userName = document.getElementById('userName');
+userName.innerText = userNaam.name
+console.log(userName.innerText);
+
+let logOutBtn = document.getElementById('logOutBtn')
+logOutBtn.onclick =()=> {
+    localStorage.clear();
+    window.location.reload();
+}

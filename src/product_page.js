@@ -40,7 +40,7 @@ div1000g.onclick = () => {
 //let count = 0;
 //let packsize = 100
 const getData = async () => {
-  let res = await fetch('http://localhost:3000/selectedProduct');
+  let res = await fetch('https://bigbasket-kb7a.onrender.com/selectedProduct');
   let data = await res.json();
 
   console.log(data);
@@ -53,7 +53,7 @@ const getData = async () => {
 getData();
 
 // const getCartData = async () => {
-//   let res = await fetch('http://localhost:3000/carts');
+//   let res = await fetch('https://bigbasket-kb7a.onrender.com/carts');
 //   let data = await res.json();
 //   let basketcount = document.getElementById('basketcount');
 //   if (data.length < 0 || data.length == undefined || data.length == null) {
@@ -130,7 +130,7 @@ const appendName = (data, container) => {
 
 //ChangePriceto250g
 const updatePrice = async (updatepack) => {
-  let resp = await fetch('http://localhost:3000/selectedProduct');
+  let resp = await fetch('https://bigbasket-kb7a.onrender.com/selectedProduct');
   let datap = await resp.json();
   let presentId;
   let presentprice;
@@ -161,7 +161,7 @@ const updatePrice = async (updatepack) => {
     packsize: newpack,
   };
 
-  let res = await fetch(`http://localhost:3000/selectedProduct/${presentId}`, {
+  let res = await fetch(`https://bigbasket-kb7a.onrender.com/selectedProduct/${presentId}`, {
     method: 'PATCH',
     body: JSON.stringify(send_data),
     headers: {
@@ -172,12 +172,13 @@ const updatePrice = async (updatepack) => {
  
   let data = await res.json();
   console.log(data);
+  window.location.reload();
 };
 
 //addtocart
 
 const addtocart = async () => {
-  let resp = await fetch('http://localhost:3000/selectedProduct');
+  let resp = await fetch('https://bigbasket-kb7a.onrender.com/selectedProduct');
   let datap = await resp.json();
   let nid, name, price, packsize, description, delivery, image, count, subtotal;
 
@@ -205,7 +206,7 @@ const addtocart = async () => {
     count,
   };
 
-  let res = await fetch('http://localhost:3000/carts', {
+  let res = await fetch('https://bigbasket-kb7a.onrender.com/carts', {
     method: 'POST',
     body: JSON.stringify(send_data),
     headers: {
@@ -217,6 +218,7 @@ const addtocart = async () => {
   let data = await res.json();
   console.log(data);
  // getCartData();
+ window.location.reload();
 };
 
 

@@ -1,9 +1,11 @@
 const navbar = ()=> {
     return `
     <div id="login">
+
         <div id="user_icon" class="bgc_green">
             <i class="fa fa-user"></i><span id="userName">login▼</span>
         </div>
+        <a id="admin" href="admin.html"><i class="fa fa-user"></i><span >admin login▼</span></a>
         <div>
             <i class="fa fa-phone"></i>1860 123 1000
             <i class="fa fa-location-dot"></i>560004, Bangalore ▼
@@ -19,7 +21,7 @@ const navbar = ()=> {
             <li>Wallet</li>
             <li>My Reward</li>
             <li>Ask Us</li>
-            <li>Customer Service</li>
+            <li id="logOutBtn">Log Out</li>
             <li id="logInBtn">Log In</li>
             <!-- <li>Logout</li> -->
         </ul>
@@ -34,7 +36,7 @@ const navbar = ()=> {
         </div>
         <a  id="right" href="checkout.html" target="_blank">
             <div>
-                <i class="fa fa-basket-shopping"></i>
+                <i class="fa fa-basket-shopping"><span id="cartLength"></span></i>
             </div>
         </a>
     </nav>

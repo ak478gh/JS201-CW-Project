@@ -1,6 +1,6 @@
 import footer from "../components/footer.js"
 const checkoutheader=async()=>{
-    let res=await fetch(`http://localhost:3000/carts`)
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts`)
     let data=await res.json()
     console.log(data)
     let div=document.getElementById('checkout-header')
@@ -9,7 +9,7 @@ const checkoutheader=async()=>{
  checkoutheader()
 
  const checkoutdata=async()=>{
-    let res=await fetch(`http://localhost:3000/carts`)
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts`)
     let data=await res.json()
     console.log(data)
     checckoutappend(data)
@@ -59,7 +59,7 @@ const checkoutheader=async()=>{
  }
 
  const subtotalprice=async()=>{
-    let res=await fetch(`http://localhost:3000/carts`)
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts`)
     let data=await res.json()
     console.log(data)
    let totalprice=data.reduce((acc,el)=>{
@@ -79,7 +79,7 @@ const checkoutheader=async()=>{
 
  const subproduct=async(el)=>{
    let getid=el.id
-   let resdata=await fetch(`http://localhost:3000/carts/${getid}`,{
+   let resdata=await fetch(`https://bigbasket-kb7a.onrender.com/carts/${getid}`,{
         method:'GET',
         headers:{
             'Content-Type':'application/json'
@@ -95,7 +95,7 @@ const checkoutheader=async()=>{
        }
        let id=el.id
        console.log(send_data)
-       let res=await fetch(`http://localhost:3000/carts/${id}`,{
+       let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts/${id}`,{
               method:'PATCH',
               body:JSON.stringify(send_data),
               headers:{
@@ -105,14 +105,12 @@ const checkoutheader=async()=>{
           let data=await res.json()
           console.log(data)
     }
- 
-    
-
+    window.location.reload();
  }
  let arr=[]
  const addproduct=async(el)=>{
    let getid=el.id
-   let resdata=await fetch(`http://localhost:3000/carts/${getid}`,{
+   let resdata=await fetch(`https://bigbasket-kb7a.onrender.com/carts/${getid}`,{
         method:'GET',
         headers:{
             'Content-Type':'application/json'
@@ -127,7 +125,7 @@ const checkoutheader=async()=>{
  }
  let id=el.id
  console.log(send_data)
- let res=await fetch(`http://localhost:3000/carts/${id}`,{
+ let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts/${id}`,{
         method:'PATCH',
         body:JSON.stringify(send_data),
         headers:{
@@ -137,7 +135,7 @@ const checkoutheader=async()=>{
     let data=await res.json()
     console.log(data)
     
-
+    window.location.reload();
  }
  console.log(arr)
 
@@ -160,7 +158,7 @@ const checkoutheader=async()=>{
   
  const deletefunc=async(el)=>{
    let id=el.id
-   let res=await fetch(`http://localhost:3000/carts/${id}`,{
+   let res=await fetch(`https://bigbasket-kb7a.onrender.com/carts/${id}`,{
         method:'DELETE',
         headers:{
             'Content-Type':'application/json'
@@ -168,6 +166,7 @@ const checkoutheader=async()=>{
     })
     let data=await res.json()
     console.log(data)
+    window.location.reload();
  }
 
  const footer_div=document.getElementById("footer_div")

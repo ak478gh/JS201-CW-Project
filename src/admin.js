@@ -21,26 +21,20 @@ const addproductfun=async()=>{
     console.log(send_data)
     
     
-    let resdata=await fetch(`http://localhost:3000/admin-product
+    let resdata=await fetch(`https://bigbasket-kb7a.onrender.com/admin-product
     `,{
      method:'POST',
      body:JSON.stringify(send_data),
      headers:{
         'Content-Type':'application/json'
      }
-    })
+    });
+    window.location.reload();
 
 }
-const checkoutheader=async()=>{
-    
-    console.log(data)
-    let div=document.getElementById('checkout-header')
-    div.innerText=`Your Basket (${data.length}) items`
- }
- checkoutheader()
 
  const checkoutdata=async()=>{
-    let res=await fetch(`http://localhost:3000/admin-product`)
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/admin-product`)
     let data=await res.json()
     console.log(data)
     checckoutappend(data)
@@ -89,9 +83,20 @@ const checkoutheader=async()=>{
     })
   }
 
+  const deletefunc = async (el)=> {
+   let deleteid=el.id
+    let resdelete=await fetch(`https://bigbasket-kb7a.onrender.com/admin-product/${deleteid}
+    `,{
+     method:'DELETE',
+     headers:{
+        'Content-Type':'application/json'
+     }
+    })
+    window.location.reload();
+  } 
 
   const confirmfun=async(el)=>{
-    let res=await fetch(`http://localhost:3000/products`)
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/products`)
     let data=await res.json()
     let id=data.length
     console.log(id)
@@ -107,7 +112,7 @@ const checkoutheader=async()=>{
     // console.log(send_data)
     
     
-    let resdata=await fetch(`http://localhost:3000/products
+    let resdata=await fetch(`https://bigbasket-kb7a.onrender.com/products
     `,{
      method:'POST',
      body:JSON.stringify(send_data),
@@ -116,13 +121,14 @@ const checkoutheader=async()=>{
      }
     })
     let deleteid=el.id
-    let resdelete=await fetch(`http://localhost:3000/admin-product/${deleteid}
+    let resdelete=await fetch(`https://bigbasket-kb7a.onrender.com/admin-product/${deleteid}
     `,{
      method:'DELETE',
      headers:{
         'Content-Type':'application/json'
      }
     })
+    window.location.reload();
   }
   const updatepricefun=async(el)=>{
     let id=el.id
@@ -130,7 +136,7 @@ const checkoutheader=async()=>{
     let send_data={
         price:updetedprice
     }
-    let res=await fetch(`http://localhost:3000/admin-product/${id}`,{
+    let res=await fetch(`https://bigbasket-kb7a.onrender.com/admin-product/${id}`,{
         method:'PATCH',
      body:JSON.stringify(send_data),
      headers:{
@@ -139,4 +145,5 @@ const checkoutheader=async()=>{
     })
     let data=await res.json()
     console.log(data)
+    window.location.reload();
   }

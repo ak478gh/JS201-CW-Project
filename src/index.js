@@ -253,3 +253,25 @@ el.onclick=()=>{
 }
 })
 
+
+
+// responsive Navbar
+
+window.onresize = reportWindowSize;
+
+// let navbar_div = document.getElementById('navbar_div')
+
+    function reportWindowSize() {
+
+        if(window.innerWidth>800) {
+         navbar_div.innerHTML = navbar();
+            console.log('less than 800')
+            let res_navbar = document.getElementById('res_navbar');
+        } else {
+         console.log('greater than 800')
+         navbar_div.innerHTML = small_screen_navbar();
+        }
+    }
+    window.onresize = reportWindowSize;
+
+    console.log(window.innerWidth)

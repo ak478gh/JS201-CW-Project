@@ -16,37 +16,45 @@
   "selectedProduct": [
     {
       "id": 4,
-      "name": "Onion (Loose)",
-      "price": 220,
-      "packsize": 500,
+      "name": "Fresho Capsicum - Green (Loose)",
+      "price": 82,
+      "packsize": 1000,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
       "delivery": "Delivery: 11 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "image": "https://www.bigbasket.com/media/uploads/p/l/10000069_20-fresho-capsicum-green.jpg",
       "catagory": "vegetable",
-      "nid": "3"
+      "nid": "2"
     }
   ],
+  "admin-product": [],
   "carts": [
     {
-      "id": "7",
-      "name": "Baby Apple Shimla",
-      "price": 122.5,
-      "packsize": 500,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "id": "122",
+      "name": "Onion (Loose)",
+      "price": 220,
       "delivery": "Delivery: 15 Nov",
-      "image": "https://www.bigbasket.com/media/uploads/p/s/40134281_13-fresho-baby-apple-shimla.jpg",
-      "subtotal": 122.5,
-      "count": 1
+      "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "subtotal": 440,
+      "count": 2
     },
     {
       "id": "3",
       "name": "Onion (Loose)",
       "price": 220,
-      "packsize": 500,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
       "delivery": "Delivery: 11 Nov",
       "image": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
-      "subtotal": 220,
+      "subtotal": 440,
+      "count": 2
+    },
+    {
+      "id": "2",
+      "name": "Fresho Capsicum - Green (Loose)",
+      "price": 82,
+      "packsize": 1000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "delivery": "Delivery: 11 Nov",
+      "image": "https://www.bigbasket.com/media/uploads/p/l/10000069_20-fresho-capsicum-green.jpg",
+      "subtotal": 82,
       "count": 1
     }
   ],

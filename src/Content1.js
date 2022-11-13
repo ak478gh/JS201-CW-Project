@@ -29,9 +29,9 @@ function movie(){
 movie()
 
 // fetching all the data from db.json
-let final
+let final;
 const getData= async()=>{
-    let res= await fetch`http://localhost:3000/products`
+    let res= await fetch(`https://bigbasket-kb7a.onrender.com/products`)
 
     let data = await res.json()
     final=data
@@ -39,31 +39,26 @@ const getData= async()=>{
 }
 getData()
 
-// Popularity 
-let Popularity= document.getElementById("Popularity")
-Popularity.onclick=()=>{
-    popularity()
+let sort = document.getElementById('Popular_sort')
+sort.addEventListener('change', sortCategory);
+
+function sortCategory() {
+    if(sort.value=='Popularity') {
+        popularity();
+    } else if(sort.value=='Low_to_High') {
+        sortLowToHigh();
+    } else if(sort.value=='High_to_Low') {
+        sortHighToLow();
+    } else if(sort.value=='Alphabetical') {
+        sortAlphabetical();
+    }
 }
 
-// low to high button
-let Low_to_High= document.getElementById("Low_to_High")
-Low_to_High.onclick=()=>{
-    sortLowToHigh()
-}
-// high to low button
-let High_to_Low= document.getElementById("High_to_Low")
-High_to_Low.onclick=()=>{
-    sortHighToLow()
-}
 
-let Alphabetical=document.getElementById("Alphabetical")
-Alphabetical.onclick=()=>{
-    sortAlphabetical()
-}
 
 // Popularity functionality
 const popularity=async()=>{
-    let res= await fetch`http://localhost:3000/products`
+    let res= await fetch(`https://bigbasket-kb7a.onrender.com/products`)
 
     let data = await res.json()
 
@@ -72,26 +67,26 @@ const popularity=async()=>{
 
 // Low_to_High functionality
 const sortLowToHigh= async()=>{
-    let res= await fetch`http://localhost:3000/products?_sort=price&_order=asc`
+    let res= await fetch(`https://bigbasket-kb7a.onrender.com/products?_sort=price&_order=asc`)
 
     let data = await res.json()
     appendData(data)
-    console.log(data)
+    // console.log(data)
 }
 
 // high to low functionality
 const sortHighToLow=async()=>{
-    let res= await fetch`http://localhost:3000/products?_sort=price&_order=desc`
+    let res= await fetch(`https://bigbasket-kb7a.onrender.com/products?_sort=price&_order=desc`)
 
     let data = await res.json()
     appendData(data)
-    console.log(data)
+    // console.log(data)
 }
 
 // sort by Alphabetical functionality
 
 const sortAlphabetical=async ()=>{
-    let res= await fetch`http://localhost:3000/products?_sort=name&_order=asc`
+    let res= await fetch(`https://bigbasket-kb7a.onrender.com/products?_sort=name&_order=asc`)
 
     let data = await res.json()
 
@@ -464,7 +459,7 @@ const herbsSeasoning=(data)=>{
 
 const selectedProduct = async (ele) =>
 {
-  let resp = await fetch('http://localhost:3000/selectedProduct');
+  let resp = await fetch('https://bigbasket-kb7a.onrender.com/selectedProduct');
   let datap = await resp.json();
   let presentId;
   datap.forEach((elem) => {
@@ -498,7 +493,7 @@ const selectedProduct = async (ele) =>
     nid:ele.id
     };
 console.log("--------------------------"+id)
-  let res = await fetch(`http://localhost:3000/selectedProduct/${presentId}`, {
+  let res = await fetch(`https://bigbasket-kb7a.onrender.com/selectedProduct/${presentId}`, {
     method: 'PATCH',
     body: JSON.stringify(send_data),
     headers: {
@@ -513,7 +508,7 @@ console.log("--------------------------"+id)
   
 };
 
-console.log(final)
+// console.log(final)
 
 // add to cart functionality
 
@@ -542,7 +537,7 @@ const addtocart = async (elem) => {
       count
     };
   
-    let res = await fetch('http://localhost:3000/carts', {
+    let res = await fetch('https://bigbasket-kb7a.onrender.com/carts', {
       method: 'POST',
       body: JSON.stringify(send_data),
       headers: {
