@@ -120,12 +120,13 @@ img{
 }
 #shopByCategory_drpDwn{
     display: none;
-    border: 1px solid;
+    border-bottom: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 92%;
     margin: auto;
 }
 .UL{
-    border: 1px solid;
+    /* border: 1px solid; */
     display: flex;
     flex-direction: column;
 }
@@ -169,11 +170,12 @@ button {
     background-color: rgb(2, 189, 2);
 }
 .style{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: white;
     position: absolute;
     display: none;
     grid-template-columns: repeat(4, 1fr);
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 73%;
     left: 22.5%;
     margin: auto;
@@ -190,11 +192,11 @@ button {
     position: absolute;
     height: 400px;
     width: 400px;
-    background-color: red;
+    /* background-color: red; */
     /* border: 1px solid; */
     right: 500px;
 }
 #popUp input{
     padding: 2% 25%;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
