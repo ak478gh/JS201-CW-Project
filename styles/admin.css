@@ -1,0 +1,252 @@
+#admin-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0f0f0f;
+    color: #ffff;
+}
+#adminflex{
+    display: flex;
+    gap: 30px;
+}
+#admin-navbar h2:hover{
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+}
+#product_div{
+    background-color: #e0e0d8;
+    text-align: center;
+}
+#addproduct button{
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    background-color: #0072ba;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+#product-details{
+    width: 18%;
+    margin: auto;
+    line-height: 30px;
+}
+#addproduct{
+    width: 18%;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+#delivery-date{
+    width: 165px;
+}
+#checkout-header{
+    width: 85%;
+    margin: auto;
+    font-size: 30px;
+    color: #676c7b;
+    
+}
+#body{
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+#promo-button{
+    width: 85%;
+    margin: auto;
+    font-size: 24px;
+    color: #676c7b;
+    
+    border-radius: 10px;
+    margin-top: 30px;
+    
+}
+#promo-button button{
+padding: 10px 60px 10px 60px;
+border: 1px solid orange;
+border-radius: 15px;
+font-size: 18px;
+font-weight: bold;
+}
+#promo-button button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#description-header{
+    width: 90%;
+    margin: auto;
+    background-color: #555555;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    align-items: center;
+    padding-right: 10px;
+}
+#description-right{
+    display: flex;
+    gap: 40px;
+    width: 23%;
+    align-items: center;
+    width:50%;
+    
+}
+#description-container{
+    width: 90%;
+    margin: auto;
+    
+}
+#main-div{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 10px;
+    border-bottom:1px solid #BDBDBD;
+    
+}
+#main-div p{
+    font-weight: bold;
+    color: #757575;
+}
+#leftdiv{
+    width:30%;
+   margin-left: 30px;
+   line-height: 25px;
+   text-align: center;
+}
+#rightdiv{
+    width: 60%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+#buttondiv{
+    display: flex;
+}
+#buttondiv button{
+    height: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+#subtotal-div{
+    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+}
+#subtotal-total{
+    display: flex;
+    justify-content: space-around;
+    color: #676c7b;
+}
+#delivery-charge{
+    display: flex;
+    justify-content: space-around;
+    color: #676c7b;
+}
+
+#total{
+    display: flex;
+    justify-content: space-around;
+}
+#total p{
+    font-size: 30px;
+    
+}
+#checkout-button{
+    margin-left: 90px;
+    padding-bottom: 20px;
+}
+#checkout-button button{
+    padding: 15px 80px 15px 80px;
+    background-color: #fbe07a;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    color: #676c7b;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px;
+    
+}
+#checkout-button button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* #checkout-icon{
+    margin-left: 5px;
+} */
+#continue-shopping{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+}
+#shopping button{
+    padding: 13px 50px 13px 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 17px;
+}
+#shopping button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#discounted-price{
+    font-size: 17px;
+}
+#delete{
+    font-size: 20px;
+    margin-left: 30px;
+}
+#delete:hover{
+    color: #FF1744;
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+#discounted-price{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #757575;
+}
+#confirm{
+    padding: 5px 30px 5px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color:teal;
+    color:white;
+    font-weight: bold;
+}
+#confirm:hover{
+    transform: scale(1.1);
+}
+
+#updateprice{
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color:teal;
+    color:white;
+    font-weight: bold;
+}
+#updateprice:hover{
+    transform: scale(1.1);
+   
+}

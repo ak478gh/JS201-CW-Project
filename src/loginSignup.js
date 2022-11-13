@@ -69,7 +69,7 @@ class User {
     }
 };
 // Global Variables
-let Login_status
+let Login_status;
 
 // Creating a User
 let user = new User();
@@ -96,8 +96,8 @@ const Register = ()=> {
 const Login = async ()=> {
 
     // accessing the data from the form
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
+    const username = document.getElementById('login_username').value;
+    const password = document.getElementById('login_password').value;
 
     // calling the login funciton with the data and getting the token out of it
     let {token} = await user.Login(username, password);
@@ -127,6 +127,7 @@ let userNaam;
 let Register_btn = document.getElementById('Register_btn')
 Register_btn.onclick = ()=> {
     Register();
+
 }
 
 // On clicking Login Button

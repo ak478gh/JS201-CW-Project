@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://kit.fontawesome.com/0c167b58fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="admin-navbar">
+        <div id="adminflex">
+           <a href="index.html"><h2>Back To Site</h2></a> 
+           <a href=""> <h2>Manage</h2></a>
+        </div>
+        <div>
+          <a href=""><h2>Login</h2></a> 
+        </div>
+    </div>
+    <div id="product_div">
+      <h1>Products</h1>
+    </div>
+   
+    <div id="product-details">
+        <h1>Add Product</h1>
+        <input type="text" id="product-name" placeholder="Product Name"><br>
+        <input type="text" id="product-price"  placeholder="Product Price"><br>
+        <input type="text" id="product-categories"  placeholder="Prooduct Categories"><br>
+        <input type="text" id="product-image"  placeholder="Product imageurl"><br>
+        <input type="date" id="delivery-date">
+    </div>
+    <div id=addproduct>
+        <button id="addproductbtn">+ Add Product</button>
+    </div>
+    <div id="body">
+        <div id="checkout-header"></div>
+        <hr style="width:90%;margin: auto;margin-top: 20px;">
+       
+        <div id="description-header">
+            <div id="description-left">
+                <p>ITEM DESCRIPTION</p>
+            </div>
+            <div id="description-right">
+                <p> UNIT PRICE</p>
+                <p> TYPE</p>
+                <p> STATUS</p>
+                <p>UPDATE PRICE</p>
+               <p>REMOVE</p>
+               <p>CONFIRM</p>
+               
+               
+            </div>
+        </div>
+        <div id="addproduct-container"></div>
+    
+</body>
+</html>
+<script src="admin.js"></script>
